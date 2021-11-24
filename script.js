@@ -8,6 +8,18 @@ function Book(title, author, publishedDate, read = false){
   this.read = read
 }
 
-function addBookToLibrary(){
+function addBookToLibrary(author, title, publishedDate, read){
   
+  // get form stuff first
+  // let newbook = new Book(
+
+  // )
+}
+
+function openForm() {
+  document.getElementById('add-book-form').style.display = 'block';
+}
+
+function closeForm(){
+  document.getElementById('add-book-form').style.display = 'none';
 }

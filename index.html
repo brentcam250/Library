@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<script src = './script.js'></script>
 
 <html>
 <head>
@@ -16,11 +15,12 @@
     <button class = 'open-button' onclick="openForm()">Add book</button>
     <div class = 'form-container'>
       <form class = 'form' id = 'add-book-form'>
-        Title: <input type = 'text' name = 'title'><br />
-        Author: <input type = 'text' name = 'author'><br />
-        Pagecount: <input type = 'number' name = 'pages'><br />
-        Read?: <input type = 'checkbox' name = 'read'><br />
-        <input type = 'button' onclick="addBook()" value = 'submit'>
+        Title: <input type = 'text' name = 'title' id = 'title'><br />
+        Author: <input type = 'text' name = 'author' id = 'author'><br />
+        Pagecount: <input type = 'number' name = 'pages' id = 'pages'><br />
+        Read?: <input type = 'checkbox' name = 'read' id = 'read'><br />
+        <!-- <input type = 'button'  value = 'submit'> -->
+        <button type = 'submit'  class = 'submit-btn'>Submit</button>
       </form>
     </div>
     <h3>Books:</h3>
@@ -33,3 +33,4 @@
 </body>
 
 </html>
+<script src = './script.js'></script>

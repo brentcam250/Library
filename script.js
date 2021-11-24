@@ -14,10 +14,10 @@ function Book(title, author, publishedDate, read = false){
 
 function addBookToLibrary(book){
   console.log("adding books")
-  // get form stuff first
-  // let newbook = new Book(
+  myLibrary.push(book);
+  localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+  console.log(localStorage.getItem('myLibrary'));
 
-  // )
 }
 function openForm() {
   document.getElementById('add-book-form').style.display = 'block';
@@ -46,12 +46,9 @@ let read = document.getElementById("read");
 
 form.addEventListener("submit", function(event){
   event.preventDefault()
-  // console.log(title.value);
-  // console.log(author.value);
-  // console.log(pages.value);
-  // console.log(read.value);
 
-  let book =  new Book(title.value, author.value, pages.value, read.value)
+  let book =  new Book(title.value, author.value, pages.value, read.value);
+  addBookToLibrary(book);
 })
 
 //form submitted, create new book and then add it to library

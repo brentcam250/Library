@@ -13,9 +13,12 @@ function Book(title, author, publishedDate, read = false){
 }
 
 function addBookToLibrary(book){
-  console.log("adding books")
   myLibrary.push(book);
+  console.log(myLibrary);
+  console.log(book);
   localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+  localStorage.setItem('myLibrary', (myLibrary));
+
   console.log(localStorage.getItem('myLibrary'));
 
 }
@@ -51,12 +54,20 @@ form.addEventListener("submit", function(event){
 })
 
 function displayBooks(){
-  books = localStorage.getItem("myLibrary")
-  let list = document.getElementById('books-table')
-  let li
-  console.log(books.length);
+  // books = (localStorage.getItem("myLibrary"));
+  // let string = '{title: "asdf", author: "asdf", pages: input#pages, read: "on"}';
+  let string = '[1, 5, "false"]';
+  // console.log(typeof books);
+  // let string = (localStorage.getItem("myLibrary"));
+  let books = JSON.parse(string);
+  console.log(books)
+  let list = document.getElementById('books-table');
+  let li;
+  // console.log(books);
+  // let books;
+  // console.log(books);
   for (book in books ){
-    // console.log(book)
+    console.log(book)
     li = document.createElement('li');
     li.appendChild(document.createTextNode(book.title));
     list.appendChild(li);

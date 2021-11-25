@@ -28,7 +28,6 @@ function closeForm(){
 }
 
 
-// doesnt work yet...
 //should close the popup if you click outside of it
 window.addEventListener("click", (event) => {
   if(event.target === container) {
@@ -51,18 +50,17 @@ form.addEventListener("submit", function(event){
   addBookToLibrary(book);
 })
 
-//form submitted, create new book and then add it to library
-// function addBook(title, author, pages, read){
-//   let book = Book.new(title,author,pages,read)
-//   // addBookToLibrary(book);
-//   myLibrary.push(book);
-//   localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
-//   // console.log(myLibrary);
-
-// }
-
-// form.addEventListener("submit", (e) => {
-//   let bookAttributes = event.target.elements
-//   console.log(bookAttributes);
-// })
-
+function displayBooks(){
+  books = localStorage.getItem("myLibrary")
+  let list = document.getElementById('books-table')
+  let li
+  console.log(books.length);
+  for (book in books ){
+    // console.log(book)
+    li = document.createElement('li');
+    li.appendChild(document.createTextNode(book.title));
+    list.appendChild(li);
+    // console.log(li);
+  }
+  // console.log(books)
+}

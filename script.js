@@ -55,8 +55,7 @@ form.addEventListener("submit", function(event){
 function displayBooks(){
 
   let booksTable = document.getElementById('books-table');
-  let li;
-
+  booksTable.innerHTML = ''; //Reset table before populating new one.
 
 
   let row;

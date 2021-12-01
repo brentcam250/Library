@@ -46,7 +46,7 @@ let read = document.getElementById("read");
 
 form.addEventListener("submit", function(event){
   event.preventDefault()
-
+  closeForm();
   let book =  new Book(title.value, author.value, pages.value, read.value);
   addBookToLibrary(book);
 })
@@ -56,6 +56,8 @@ function displayBooks(){
 
   let booksTable = document.getElementById('books-table');
   let li;
+
+
 
   let row;
   let i = 0;

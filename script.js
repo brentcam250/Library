@@ -69,6 +69,8 @@ function displayBooks(){
         authorCell.innerHTML = myLibrary[i].author
       pagesCell = row.insertCell(2)
         pagesCell.innerHTML = myLibrary[i].pages
+      readCell = row.insertCell(3)
+        readCell.innerHTML = myLibrary[i].read
     i ++;
   }
   // console.log(books)

@@ -2,3 +2,12 @@
   display: none;
   border: 1px solid black;
 }
+
+
+.table-container {
+  border: 1px solid black;
+  padding: 10px;
+}
+.table-container td {
+  border-left: 1px solid black;
+}

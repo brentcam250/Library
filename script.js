@@ -1,4 +1,7 @@
+let testBook = new Book("Title", "author", "420")
 let myLibrary = [];
+myLibrary.push(testBook)
+
 const container = document.querySelector(".container");
 // const form = document.querySelector("#add-book-form");
 const form = document.getElementById("add-book-form");
@@ -62,6 +65,8 @@ function displayBooks(){
   let i = 0;
   while (i < myLibrary.length){
     // console.log(myLibrary[i])
+    let deleteButton = document.createElement("button");
+    deleteButton.innerHTML = 'Delete Book';
     row = booksTable.insertRow(i);
       titleCell = row.insertCell(0)
         titleCell.innerHTML = myLibrary[i].title
@@ -71,6 +76,7 @@ function displayBooks(){
         pagesCell.innerHTML = myLibrary[i].pages
       readCell = row.insertCell(3)
         readCell.innerHTML = myLibrary[i].read
+      row.appendChild(deleteButton);
     i ++;
   }
   // console.log(books)

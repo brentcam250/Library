@@ -67,6 +67,11 @@ function displayBooks(){
     // console.log(myLibrary[i])
     let deleteButton = document.createElement("button");
     deleteButton.innerHTML = 'Delete Book';
+
+    let readButton = document.createElement("input");
+    readButton.setAttribute("type", "checkbox");
+    readButton.innerHTML = 'Read?';
+
     row = booksTable.insertRow(i);
       titleCell = row.insertCell(0)
         titleCell.innerHTML = myLibrary[i].title
@@ -77,6 +82,9 @@ function displayBooks(){
       readCell = row.insertCell(3)
         readCell.innerHTML = myLibrary[i].read
       row.appendChild(deleteButton);
+      row.appendChild(readButton);
+      // readCheckbox = row.insertCell(4)
+      //   readCheckbox.setAttribute("type", "checkbox")   
     i ++;
   }
   // console.log(books)
